@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+.maincontainer {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.8) 0%,
+      rgba(92, 77, 66, 0.8) 100%
+    ),
+    url("bg-masthead.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.julio {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4623a;
+  padding-block: 15px;
+  box-sizing: border-box;
+  position: fixed;
+}
+.menu {
+  margin-top: 10px;
+}
+.fas {
+  color: #fff;
+  height: 5px;
+}
+.logo {
+  margin-right: 50px;
+  color: #fff;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.list li a {
+  text-decoration: none;
+  color: #fff;
+}
+#toggler,
+.navbar label {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+}
+
+/* 
+ .navbar-brand {
+  color: #fff;
+  font-weight: 2400;
+}
+.collapse ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 30px;
+  right: 1rem;
+}
+.navbar {
+  width: 100%;
+  margin: auto;
+  padding: 35px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4623a;
+  list-style-type: none;
+}
+.navbar-nav {
+  position: fixed;
+  right: 1rem;
+}*/
+
+ul li a {
+  position: relative;
+}
+
+ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  border-bottom: 1.5px solid white;
+  transition: 0.5s transform ease;
+  transform: scale3d(0, 1, 1);
+  transform-origin: center;
+}
+ul li a:hover:before {
+  transform: scale3d(1, 1, 1);
+  transform-origin: center;
+}
+
+.maincontent {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  color: white;
+  text-align: center;
+}
+
+.btn1 {
+  background-color: #f4623a;
+  height: 50px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.content h1 {
+  size: 50px;
+  margin-top: 80px;
+}
+.middle1 {
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  text-align: center;
+  background-color: #f4623a;
+}
+.middle1text {
+  padding-top: 100px;
+  color: white;
+}
+.btn2 {
+  background-color: white;
+  height: 50px;
+  color: #f4623a;
+  border: none;
+  border-radius: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.middle2 {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.middle2text h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bi-gem {
+  color: #f4623a;
+}
+.bi-laptop {
+  color: #f4623a;
+}
+.bi-globe2 {
+  color: #f4623a;
+}
+.bi-heart {
+  color: #f4623a;
+}
+.zoom {
+  background-color: none;
+  transition: transform 0.2s;
+  margin: 0 auto;
+}
+
+.state .portfolio-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(244, 98, 58, 09);
+  transition: opacity 0.25 ease;
+  text-align: center;
+}
+
+.middle4 {
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+}
+.middle4text {
+  padding-top: 50px;
+}
+.btn4 {
+  background-color: white;
+  height: 50px;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.middle5 {
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+}
+.middle5text {
+  padding-top: 50px;
+}
+.form input,
+textarea {
+  margin: 5px 0px;
+  font-variant: small-caps;
+  padding: 0 5px;
+  width: 40%;
+  font-weight: 700;
+}
+.form button {
+  width: 40%;
+  padding: 10px 4px;
+  font-weight: 700;
+  background-color: #f4623a;
+  border-radius: 23px;
+  color: white;
+}
+.end {
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(189, 186, 186);
+  color: #f4623a;
+  width: 100%;
+  height: 60px;
+  background-size: cover;
+  padding-top: 15px;
+}
+.state {
+  margin: 0;
+  padding: 0;
+}
